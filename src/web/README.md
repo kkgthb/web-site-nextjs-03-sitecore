@@ -20,4 +20,4 @@ npm run start
 ## Notes
 
 * [Inner `src` folder justification](https://www.reddit.com/r/nextjs/comments/14fd1kl/comment/jp5gamb/)
-
+* [Vitest justification vs. Jest](https://www.reddit.com/r/reactjs/comments/10zyse3/is_jest_still_faster_than_vitest/)

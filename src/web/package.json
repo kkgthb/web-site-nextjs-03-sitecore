@@ -14,18 +14,23 @@
         "dev": "npm-run-all clean build:nextjs",
         "dev:nextjs": "next build",
         "develop": "dev",
-        "start": "next start"
+        "start": "next start",
+        "test": "vitest"
     },
     "dependencies": {
         "next": "latest",
         "react": "latest"
     },
     "devDependencies": {
+        "@testing-library/react": "latest",
         "@types/node": "latest",
         "@types/react": "latest",
         "@types/react-dom": "latest",
+        "@vitejs/plugin-react": "latest",
+        "jsdom": "latest",
         "npm-run-all": "latest",
         "rimraf": "latest",
-        "typescript": "latest"
+        "typescript": "latest",
+        "vitest": "latest"
     }
 }
