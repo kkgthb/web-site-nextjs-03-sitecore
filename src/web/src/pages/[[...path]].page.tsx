@@ -1,10 +1,10 @@
 import React from "react"
-import { SitecorePageProps } from "../lib/sc-page-props";
+import { SitecorePageProps } from "../myutils/sc-page-props";
 import {
     ComponentPropsContext,
     SitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import useFormattedDate from "../lib/get-hydration-friendly-datestamp";
+import useFormattedDate from "../myutils/get-hydration-friendly-datestamp";
 
 const MyPage = (myPageProps: SitecorePageProps): React.JSX.Element => {
     const myDate = useFormattedDate(Date.now());
