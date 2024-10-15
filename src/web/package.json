@@ -21,7 +21,11 @@
         "react": "latest"
     },
     "devDependencies": {
+        "@types/node": "latest",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
         "npm-run-all": "latest",
-        "rimraf": "latest"
+        "rimraf": "latest",
+        "typescript": "latest"
     }
 }
