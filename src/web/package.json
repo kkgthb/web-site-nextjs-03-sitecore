@@ -17,7 +17,8 @@
         "start": "next start"
     },
     "dependencies": {
-        "next": "latest"
+        "next": "latest",
+        "react": "latest"
     },
     "devDependencies": {
         "npm-run-all": "latest",
