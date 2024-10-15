@@ -93,4 +93,4 @@ npm run start
         * So `const MyPage = (myparams, andthat): React.JSX.Element => {...}` would have a non-null `myparams.params`, but a null `andthat` between the curly braces.
     * Re-study ES6 if you want to remember how all the destructuring-related subtleties would work.
         * As in [the docs' suggestion](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#typescript) to make your function's parameter-string signature something like `({ params }: { params: { slug: string } }): React.JSX.Element`.
-
+    * [vitest IDE bug fix](https://github.com/vitest-dev/vitest/issues/4921#issuecomment-1888484277)
