@@ -26,3 +26,4 @@ npm run start
 * Routing:
     * If you name the primary file `index.page.tsx`, it only works when you visit `http://localhost/`, and not when you visit `http://localhost/something-else/`.
     * But if you rename it `[[...path]].page.tsx`, then any URL you visit will always return its same "hello world" content.
+* `next/router`'s `useRouter().pathname` is just "`/[[...path]]`" even if I'm visiting `http://localhost/something-else/`.  That's pretty useless for me right now.
