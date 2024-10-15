@@ -1,0 +1,26 @@
+{
+    "name": "web-site-nextjs-03-sitecore",
+    "private": true,
+    "version": "0.0.0",
+    "description": "Roughly what a 'headless' Sitecore frontend ('head?!') looks like when built with Next.js",
+    "author": {
+        "name": "Katie Kodes",
+        "url": "https://katiekodes.com"
+    },
+    "scripts": {
+        "build": "npm-run-all clean build:nextjs",
+        "build:nextjs": "next build",
+        "clean": "rimraf .next",
+        "dev": "npm-run-all clean build:nextjs",
+        "dev:nextjs": "next build",
+        "develop": "dev",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "latest"
+    },
+    "devDependencies": {
+        "npm-run-all": "latest",
+        "rimraf": "latest"
+    }
+}
