@@ -19,5 +19,6 @@ export default defineConfig({
             '**/*.test.tsx',
             '**/*.test-d.tsx',
         ],
+        root: '.'
     },
 })

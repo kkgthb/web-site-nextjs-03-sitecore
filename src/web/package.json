@@ -19,7 +19,8 @@
     },
     "dependencies": {
         "next": "latest",
-        "react": "latest"
+        "react": "latest",
+        "react-dom": "latest"
     },
     "devDependencies": {
         "@testing-library/react": "latest",

@@ -23,3 +23,6 @@ npm run start
 * [Vitest justification vs. Jest](https://www.reddit.com/r/reactjs/comments/10zyse3/is_jest_still_faster_than_vitest/)
 * [Sitecore Next.js SDK documentation (Experience Platform)](https://doc.sitecore.com/xp/en/developers/hd/22/sitecore-headless-development/sitecore-javascript-rendering-sdk--jss--for-next-js.html)
 * [Sitecore Next.js SDK ocumentation (XM Cloud)](https://doc.sitecore.com/xmc/en/developers/xm-cloud/sitecore-javascript-rendering-sdk--jss--for-next-js.html)
+* Routing:
+    * If you name the primary file `index.page.tsx`, it only works when you visit `http://localhost/`, and not when you visit `http://localhost/something-else/`.
+    * But if you rename it `[[...path]].page.tsx`, then any URL you visit will always return its same "hello world" content.
