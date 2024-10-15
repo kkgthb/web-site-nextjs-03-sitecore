@@ -1,8 +1,9 @@
-import { expect, test } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import Home from './index'
+import { expect, test } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import MyPage from './index.page';
 
 test('Basic home page tests', () => {
-    render(<Home />)
-    expect(screen.getByRole('heading', { level: 1, name: 'Header goes here' })).toBeDefined()
+    render(<MyPage />);
+    const level1headerplaceholder = screen.getByRole('heading', { level: 1, name: 'Header goes here' });
+    expect(level1headerplaceholder).toBeDefined();
 })

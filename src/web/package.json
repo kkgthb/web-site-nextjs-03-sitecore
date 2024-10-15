@@ -11,8 +11,8 @@
         "build": "npm-run-all clean build:nextjs",
         "build:nextjs": "next build",
         "clean": "rimraf .next",
-        "dev": "npm-run-all clean build:nextjs",
-        "dev:nextjs": "next build",
+        "dev": "npm-run-all clean dev:nextjs",
+        "dev:nextjs": "next dev",
         "develop": "dev",
         "start": "next start",
         "test": "vitest"
