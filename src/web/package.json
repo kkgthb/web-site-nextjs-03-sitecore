@@ -18,6 +18,7 @@
         "test": "vitest"
     },
     "dependencies": {
+        "@sitecore-jss/sitecore-jss-nextjs": "latest",
         "next": "latest",
         "react": "latest",
         "react-dom": "latest"
