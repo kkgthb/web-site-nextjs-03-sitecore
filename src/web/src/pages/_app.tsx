@@ -1,4 +1,4 @@
-const App = ({ Component, pageProps }): JSX.Element => {
+const App = ({ Component, pageProps }): React.JSX.Element => {
     return <Component {...pageProps} />;
 }
 
