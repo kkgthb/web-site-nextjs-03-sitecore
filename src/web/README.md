@@ -21,3 +21,5 @@ npm run start
 
 * [Inner `src` folder justification](https://www.reddit.com/r/nextjs/comments/14fd1kl/comment/jp5gamb/)
 * [Vitest justification vs. Jest](https://www.reddit.com/r/reactjs/comments/10zyse3/is_jest_still_faster_than_vitest/)
+* [Sitecore Next.js SDK documentation (Experience Platform)](https://doc.sitecore.com/xp/en/developers/hd/22/sitecore-headless-development/sitecore-javascript-rendering-sdk--jss--for-next-js.html)
+* [Sitecore Next.js SDK ocumentation (XM Cloud)](https://doc.sitecore.com/xmc/en/developers/xm-cloud/sitecore-javascript-rendering-sdk--jss--for-next-js.html)
