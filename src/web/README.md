@@ -27,3 +27,5 @@ npm run start
     * If you name the primary file `index.page.tsx`, it only works when you visit `http://localhost/`, and not when you visit `http://localhost/something-else/`.
     * But if you rename it `[[...path]].page.tsx`, then any URL you visit will always return its same "hello world" content.
 * `next/router`'s `useRouter().pathname` is just "`/[[...path]]`" even if I'm visiting `http://localhost/something-else/`.  That's pretty useless for me right now.
+* The starter kit's boilerplate's `layoutData.sitecore.context.pageEditing` probably corresponds to the layout service API response JSON's `.sitecore.context.pageEditing` property.
+    * This is good to know; it opens up a very big range of search terms I can now use for stalking other people's source code, since I have a few such JSON responses tucked away.
