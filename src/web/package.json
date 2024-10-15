@@ -12,7 +12,7 @@
         "build:nextjs": "next build",
         "clean": "rimraf .next",
         "dev": "npm-run-all clean dev:nextjs",
-        "dev:nextjs": "next dev",
+        "dev:nextjs": "cross-env NODE_OPTIONS='--inspect' next dev",
         "develop": "dev",
         "start": "next start",
         "test": "vitest"
@@ -29,6 +29,7 @@
         "@types/react": "latest",
         "@types/react-dom": "latest",
         "@vitejs/plugin-react": "latest",
+        "cross-env": "latest",
         "jsdom": "latest",
         "npm-run-all": "latest",
         "rimraf": "latest",

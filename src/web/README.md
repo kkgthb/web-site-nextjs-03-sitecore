@@ -29,3 +29,68 @@ npm run start
 * `next/router`'s `useRouter().pathname` is just "`/[[...path]]`" even if I'm visiting `http://localhost/something-else/`.  That's pretty useless for me right now.
 * The starter kit's boilerplate's `layoutData.sitecore.context.pageEditing` probably corresponds to the layout service API response JSON's `.sitecore.context.pageEditing` property.
     * This is good to know; it opens up a very big range of search terms I can now use for stalking other people's source code, since I have a few such JSON responses tucked away.
+* Old-routing, server `useRouter()` contents when you visit `http://localhost/something-else/`:
+        ```json
+        {
+            "route": "/[[...path]]",
+            "pathname": "/[[...path]]",
+            "query": {},
+            "asPath": "/[[...path]]",
+            "isFallback": false,
+            "basePath": "",
+            "isReady": false,
+            "isPreview": false,
+            "isLocaleDomain": false
+        }
+        ```
+* Old-routing, hydrated `useRouter()` contents when you visit `http://localhost/something-else/`:
+        ```json
+        {
+            "pathname": "/[[...path]]",
+            "route": "/[[...path]]",
+            "query": {},
+            "asPath": "/[[...path]]",
+            "components": {
+                "/[[...path]]": {
+                    "initial": true,
+                    "props": {
+                        "pageProps": {}
+                    }
+                },
+                "/_app": {
+                    "styleSheets": []
+                }
+            },
+            "isFallback": false,
+            "basePath": "",
+            "isReady": false,
+            "isPreview": false,
+            "isLocaleDomain": false,
+            "events": {}
+        }
+        ```
+* New-routing:  If your  `/src/app/[[slug]]/page.tsx` file exports a function that returns a `React.JSX.Element`:
+    * Next.js will attempt to pass it a value through your function's first remaining not-yet-given-a-value-by-name parameter that reads like this:
+            ```json
+            {
+                "params": {
+                    "slug": [
+                        "something-else",
+                        "entirely"
+                    ]
+                },
+                "searchParams": {}
+            }
+            ```
+    * Or, if you're on the home page rather than visiting `https://localhost/something-else/entirely/, it'll read like this:
+            ```json
+            {
+                "params":{},
+                "searchParams":{}
+            }
+            ```
+    * Next.js will leave all remaining not-yet-given-a-value-by-name parameters `undefined`.
+        * So `const MyPage = (myparams, andthat): React.JSX.Element => {...}` would have a non-null `myparams.params`, but a null `andthat` between the curly braces.
+    * Re-study ES6 if you want to remember how all the destructuring-related subtleties would work.
+        * As in [the docs' suggestion](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#typescript) to make your function's parameter-string signature something like `({ params }: { params: { slug: string } }): React.JSX.Element`.
+
